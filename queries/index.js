@@ -14,7 +14,7 @@ exports.initialize = function initializeQueries(plugin) {
 exports.queryFactories = {
 	fetchCollection(plugin) {
 		const pattern = {
-			comp: 'catalog',
+			plugin: 'catalog',
 			role: 'query',
 			cmd: 'fetchCollection'
 		};
@@ -34,7 +34,7 @@ exports.queryFactories = {
 
 	fetchCollections(plugin) {
 		const pattern = {
-			comp: 'catalog',
+			plugin: 'catalog',
 			role: 'query',
 			cmd: 'fetchCollections'
 		};

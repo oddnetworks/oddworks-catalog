@@ -14,7 +14,7 @@ exports.initialize = function initializeCommands(plugin) {
 exports.commandFactories = {
 	upsertCollection(plugin) {
 		const pattern = {
-			comp: 'catalog',
+			plugin: 'catalog',
 			role: 'command',
 			cmd: 'upsertCollection'
 		};
@@ -37,7 +37,7 @@ exports.commandFactories = {
 
 	deleteCollection(plugin) {
 		const pattern = {
-			comp: 'catalog',
+			plugin: 'catalog',
 			role: 'command',
 			cmd: 'deleteCollection'
 		};

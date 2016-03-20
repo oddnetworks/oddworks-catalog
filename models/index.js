@@ -10,13 +10,13 @@ exports.initialize = function initializeModels(plugin) {
 	// Load each module in the the models/ directory and register it.
 	filepath.create(__dirname)
 		.list()
-		.filter(function (path) {
+		.filter(path => {
 			return path.toString() !== __filename && path.isFile();
 		})
-		.map(function (path) {
+		.map(path => {
 			return require(path.toString());
 		})
-		.reduce(function (registry, Model) {
+		.reduce((registry, Model) => {
 			return registry.register(Model);
 		}, registry);
 
